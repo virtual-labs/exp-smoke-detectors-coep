@@ -116,11 +116,20 @@ function mainPage1(){
 		$("#location").prop('disabled',true);
 		$("#particalSize").prop('disabled',true);
 		$("#sensorType").prop('disabled',true);	
+		$("#submitconfig").prop('disabled',true);	
+		
 		  animation();
 	}	
 	});
 	
+	
+	
 	$("#finish").click(function() {
+		$("#finish").prop('hidden',true);	
+		$("#location").prop('disabled',false);
+		$("#particalSize").prop('disabled',false);
+		$("#sensorType").prop('disabled',false);	
+		$("#submitconfig").prop('disabled',false);
 //			alert("Experiment successfully completed");
 		$("#modelMsg123").html('<img src="images/cong.gif" class="img-fluid" >');
 		
