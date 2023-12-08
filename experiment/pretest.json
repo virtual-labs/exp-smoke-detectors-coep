@@ -2,38 +2,67 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Smoke detector sensitivity shall be checked within ____ year after installation.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "4",
+        "b": "3",
+        "c": "2",
+        "d": "1"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+	
+    {
+      "question": "What is the best detector available to us that can prevent a fire from creating victims?",
+      "answers": {
+        "a": "Ultrasonic",
+        "b": "Infrared",
+        "c": "Smoke",
+        "d": "Heat"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },	
+ 
+    {
+      "question": "What is the purpose of a fire drill?",
+      "answers": {
+        "a": "Practice emergency procedures",
+        "b": "Test the effectiveness of smoke detectors",
+        "c": "Evaluate the response time of firefighters",
+        "d": "Improve workplace productivity"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
-    {
-      "question": "This is a Sample Question 2?",
+  
+	
+	{
+      "question": "What does the RACE acronym stand for in a fire emergency?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Rescue, Assess, Contain, Evacuate",
+        "b": "Run, Avoid, Cover, Escape",
+        "c": "Report, Alarm, Control, Extinguish",
+        "d": "Reach, Analyze, Cooperate, Engage"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the recommended distance between portable heaters and flammable materials?",
+      "answers": {
+        "a": "2 feet",
+        "b": "10 feet",
+        "c": "6 inches",
+        "d": "Touching distance"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
+	
+ 
   ]
 }
