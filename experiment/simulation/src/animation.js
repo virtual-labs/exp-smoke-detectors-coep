@@ -67,6 +67,7 @@ stop.click(function(){
 	c1.remove();
 	audio.pause();
 	detector.remove();
+	//$("#finish").prop('disabled',false);	
 	}else{
 		alert("Click on START button");
 	}
