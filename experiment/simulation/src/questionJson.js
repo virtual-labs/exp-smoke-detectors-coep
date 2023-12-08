@@ -1,45 +1,43 @@
 
 
-
 QuestionsJSON = {
 		"data": {
 			"SEC": [{
 
 				"QUES": [{
 					
-  
-					"QC": "Ultrasonic frequencies are above",
+					"QC": "What is the best tool available to us that can prevent a fire from creating victims?",
 					"ANS": [{
 						"ANSID": false,
-						"content": "25k Hertz"
+						"content": "Water sprinklers"
+					}, {
+						"ANSID": false,
+						"content": "A telephone"
 					}, {
 						"ANSID": true,
-						"content": "20k Hertz"
-					}, {
-						"ANSID": false,
-						"content": "15k Hertz"
+						"content": "A smoke detector"
 					},{
 						"ANSID": false,
-						"content": "10k Hertz"
+						"content": "An extinguisher"
 					}]
 				}]
 			}, {
 
 				"QUES": [{
 					
-					"QC": "Ultrasonic sensor is an electronic device used to ___.",
+					"QC": " _____ are ideal smoke and fire detectors in steamy, humid, or dusty environments.",
 					"ANS": [{
 						"ANSID": false,
-						"content": "measure height"
-					}, {
-						"ANSID": false,
-						"content": "measure time"
+						"content": "Ionisation smoke detectors"
 					}, {
 						"ANSID": true,
-						"content": "measure distance"
+						"content": "Heat detectors"
 					}, {
 						"ANSID": false,
-						"content": "measure speed"
+						"content": "Photoelectric Smoke Detectors"
+					}, {
+						"ANSID": false,
+						"content": "Ionization/Photoelectric Smoke Detectors"
 					}]
 					
 				}]
@@ -47,19 +45,20 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Ultrasonic waves are a form of _______ waves.",
+					
+					"QC": "Automatic smoke vents shall be installed ______ the auditorium.",
 					"ANS": [{
-						"ANSID": false,
-						"content": "ocean"
-					}, {
 						"ANSID": true,
-						"content": "sound"
+						"content": "Above"
 					}, {
 						"ANSID": false,
-						"content": "radio"
+						"content": "Below"
 					}, {
 						"ANSID": false,
-						"content": "seismic"
+						"content": "Side walls"
+					}, {
+						"ANSID": false,
+						"content": "Anywhere"
 					}]
 					
 				}]
@@ -67,19 +66,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "What is the use of the Ultrasonic Sensor?",
+					"QC": "Smoke alarms detect particles in the ______.",
 					"ANS": [{
+						"ANSID": false,
+						"content": "Sound"
+					}, {
+						"ANSID": false,
+						"content": "Metal"
+					}, {
+						"ANSID": false,
+						"content": "Water"
+					}, {
 						"ANSID": true,
-						"content": "Proximity Detection"
-					}, {
-						"ANSID": false,
-						"content": "Humidity Detection"
-					}, {
-						"ANSID": false,
-						"content": "Image Processing"
-					}, {
-						"ANSID": false,
-						"content": "GPS"
+						"content": "Air"
 					}]
 					
 				}]
@@ -87,19 +86,20 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Sound waves are",
+					
+					"QC": "There are two types of detection technologies of smoke alarms.",
 					"ANS": [{
+						"ANSID": false,
+						"content": "Ionization detectors"
+					}, {
+						"ANSID": false,
+						"content": "Photoelectric"
+					}, {
 						"ANSID": true,
-						"content": "Longitudinal"
+						"content": "Both a and b"
 					}, {
 						"ANSID": false,
-						"content": "Transverse"
-					}, {
-						"ANSID": false,
-						"content": "Partly longitudinal and partly transverse"
-					}, {
-						"ANSID": false,
-						"content": "Sometimes longitudinal and sometimes transverse"
+						"content": "None of these"
 					}]
 					
 				}]

@@ -25,7 +25,7 @@ $('#canvas-div').removeAttr('width');
 var x=100;
 var y=100;
 var time=1000;
-
+var stopflag=0;
 var start=paper.rect((x+50),(y-80),100,30).attr({'fill':'pink'});
 paper.text((x+100),(y-65),"START").attr({'font-size':14});
 
@@ -42,6 +42,7 @@ var c1;
 //var	sensor2= paper.image("images/smokeD2.png",x+185,y+1,130,120);
 
  function playAudio(){ 
+	stopflag==1;
     	audio.play(); 
     	} 
 
@@ -49,7 +50,9 @@ var c1;
     		audio.pause();
     	}
 var detector,c1;    	
+ 
  start.click(function(){
+	stopflag=1;
 	 detector=paper.image("images/sd.gif",x,y,500,500);
 	 playAudio();
  sensor=paper.image("images/smokeD1.png",x+165,y+8,180,130);
@@ -59,10 +62,16 @@ c1=paper.ellipse(x+324,y+88,4.3,3.4).attr({'fill':'red','stroke':'red'});
 })
 
 stop.click(function(){
-	$("#finish").prop("hidden",false);
+	if(stopflag==1){
+		$("#finish").prop("hidden",false);
 	c1.remove();
 	audio.pause();
 	detector.remove();
+	}else{
+		alert("Click on START button");
+	}
+	
+	
 	
 })
 
