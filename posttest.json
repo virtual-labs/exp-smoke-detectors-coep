@@ -1,0 +1,68 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+	
+      "question": "Smoke detector may not be more than  _____ feet from any point of ceiling.",
+      "answers": {
+        "a": "15",
+        "b": "30",
+        "c": "900 sq. ft",
+        "d": "21"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+    {
+      "question": "Which of the following will recall an elevator?",
+      "answers": {
+        "a": "Smoke detectors directly in front of the elevator",
+        "b": "Elevator machine room heat detector",
+        "c": "Manual pull station",
+        "d": "Hallway smoke detector"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },	
+ 
+    {
+      "question": "________ detect a smoldering fire the best.",
+      "answers": {
+        "a": "Line type detectors",
+        "b": "Photoelectric smoke detectors",
+        "c": "Ionization smoke detectors",
+        "d": "Duct smoke detectors"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+  
+	
+	{
+      "question": "On a ceiling that is 15 ft. high, in a room that is 20 ft. wide by 20 ft. long, the listed spacing for a smoke detector must be reduced by _______ percent.",
+      "answers": {
+        "a": "15",
+        "b": "0",
+        "c": "21",
+        "d": "7"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "When must a smoke alarm be replaced?",
+      "answers": {
+        "a": "every 5 years",
+        "b": "every 15 years",
+        "c": "every 10 years",
+        "d": "Never"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+	
+ 
+  ]
+}
