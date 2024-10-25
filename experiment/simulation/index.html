@@ -26,7 +26,16 @@
  src: url('font/digital-7.ttf');
 }
 
-
+#infoSpan {
+	background: #ebcbb8;
+    color: #000;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 </style>
 <audio id="myAudio">
@@ -42,6 +51,17 @@
 		
 	</header>
 <br>
+<div  class=" container-fluid" > 
+ <div class="row FirstRowtimer " id="selectMethod">
+      <div class="col-sm-9">
+      </div>
+     
+      <div class="col-sm-3">
+      <button type="button" class="btn btn-danger" id="procedure" data-toggle="modal" data-target="#readProcedureModal"><b>READ PROCEDURE</b></button> 
+ 	  </div>
+
+ </div> 
+</div> 
 
 
 <div id="readProcedureModal" class="modal fade" role="dialog">
@@ -66,12 +86,12 @@
 <center id="modelTitle">Simulator</center>
 
 <ol>
-	<li>Select frequency and source of sound</li>
-	<li>Click on "MEASUREMENT OF SOUND LEVEL" button</li>
-	<li>Click on "START" button and observe dB level of sound</li>	
-	<li>Click on STOP button</li>
-	<li>Enter the sound level reading(dB) in textbox and click on Submit button</li>
-	<li>Change the source of sound and follow the above steps</li>
+	<li>Select lLocation, particle size and Sensor type</li>
+	<li>Click on "CHECK CONFIGURATION" button</li>
+	<li>Click on "STOP" button</li>
+	<li>Select another lLocation, particle size and Sensor type</li>
+	<li>After select all location click on "ANIMATION" buttom
+	<li>In Animation click on "START" button and click on "STOP" button</li>	
 	<li>Click on "FINISH" button</li>
 	</ol>	
 </div> 
@@ -85,18 +105,14 @@
 </div>
 
 
-<br>
-
-
-
-
 <div  class="row container-fluid" id="mainDiv">
 
 <div class="col-lg-6" id="main-div">
 	             <div class="panel panel-primary">
-	      			<div class="panel-heading " id="panelHeading2"><center id="centerText1"> SMOKE DETECTOR DIAGRAM</center>
+	      			<div class="panel-heading " id="panelHeading2"><center id="centerText1">SMOKE DETECTOR DIAGRAM</center>
 	      			</div>
-	      			<label  id="counter"></label>
+	      			<label  id="counter"></label><br/>
+	      			<span id="infoSpan" class="col-sm-12 col-lg-12" hidden>Select another congiguration</span>
 	      			<div class="panel-body" id="canvas-div" >
 	      			<img src="images/SmokeAlarm.jpeg" class="img-fluid " width="1000" height="1000">
 	      			</div>
@@ -105,7 +121,7 @@
 	       </div>
 	<div class="col-lg-6" id="canvas">
 				<div class="panel panel-primary">
-	      			<div class="panel-heading " id="panelHeading1"><center id="centerText">BASIC KNOWLEDGE</center>
+	      			<div class="panel-heading " id="panelHeading1"><center id="centerText2">BASIC KNOWLEDGE</center>
 	      			</div>
 	     			<div class="panel-body" id="main-div-conf">
 <!-- 	     			<script>basicKnowledge();</script> -->
@@ -121,6 +137,28 @@
 	        
 	  </div>      
 	</div>
+	
+	<div class="modal fade" id="selectCheck1" role="dialog">
+				<div class="modal-dialog modal-md">
+			   <div class="modal-content">
+				    <div class="modal-header">
+				
+				      <h4 class="modal-title">Message box</h4>
+				    </div>
+				   <div class="modal-body" id="modelMsgbody11">
+				
+				    </div>
+				   <div class="modal-footer">
+				      <button type="button" class="btn btn-danger" id = "nextPage" data-dismiss="modal" >Okay</button>
+				     </div>
+				   </div>
+			 </div>
+				</div>
+				</div>
+			</div>
+				</div> 
+	
+	
 	<footer>
 Copyrights &copy; COEP - Virtual Lab
 </footer>
