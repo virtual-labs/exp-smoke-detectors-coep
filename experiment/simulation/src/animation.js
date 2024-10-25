@@ -51,7 +51,7 @@ var c1;
     	}
 var detector,c1;    	
  
- start.click(function(){
+start.click(function(){
 	stopflag=1;
 	 detector=paper.image("images/sd.gif",x,y,500,500);
 	 playAudio();

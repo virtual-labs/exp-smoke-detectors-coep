@@ -20,13 +20,6 @@
   padding: 10px;
   border: 1px solid #aaaaaa;
 }
-#timeAnswer
-{
-			background-color: #31717b;
-			color:#fff;
-			padding:10px;
-			margin: 5px;
-}
 #imgb1{
 	background-image: url("images/b1.jpg");
 	 background-color: #cccccc;
@@ -45,9 +38,9 @@
 
 #questionDiv .queTitle {
 	padding-left: 20px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 

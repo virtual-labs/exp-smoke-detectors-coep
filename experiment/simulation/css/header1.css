@@ -6,7 +6,7 @@
 /* 	border: 3px solid #666; */
 	/* 		background-color:#ededf1; */
 /* 	background-image: url("../images/bg.jpg"); */
-	font-family: Cambria, Georgia, serif;
+/*	font-family: Cambria, Georgia, serif;*/
 /* 	padding: 20px 1%; */
 }
 
@@ -244,6 +244,13 @@ background: linear-gradient(90deg, rgba(125,176,169,1) 0%, rgba(78,109,114,1) 31
 		
 	}
 	#myModal
+	{
+		
+		width:400px;
+		
+	}
+	
+	#myModal111
 	{
 		
 		width:400px;
