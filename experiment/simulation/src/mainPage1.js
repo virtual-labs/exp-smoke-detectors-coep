@@ -3,7 +3,7 @@ function mainPage1(){
 	$("#main-div-conf").html('');	
      $("#canvas-div").html('');	
      
-      $("#centerText1").html('WORKING OF SMOKE DETEDTOR ');
+      $("#centerText1").html('WORKING OF SMOKE DETEDTOR');
       $("#centerText2").html('CONFIGURATION');
       var htm = '<img src="images/smkDetector.jpeg" class="img-fluid" >'
       $("#canvas-div").html(htm);
@@ -14,7 +14,7 @@ function mainPage1(){
        +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf" id="location"  style="height:auto;">'
 	   +'<option value="0">--- Select Location --- </option>'
-	   	+'<option value="1" >Clean room</option>'
+	   +'<option value="1">Clean room</option>'
 	   +'<option value="2">Air Dust</option>'
 	   +'<option value="3">Computer Room</option>'
 	   +'<option value="4">Ware House</option>'
@@ -54,15 +54,22 @@ function mainPage1(){
 	   +'</div>'
 	   +'</div>'
 	   +'<br>' 
-   +'<div class="col-sm-12" id="buttonDiv">'
-	   +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="submitconfig" data-toggle="modal" data-target="#selectCheck" ><b>  CHECK CONFIGURATION </b></button>' 
-	    +'</div>'
+   	+'<div class="col-sm-12" id="buttonDiv">'
+	+'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="submitconfig" data-toggle="modal" data-target="#selectCheck" ><b>  CHECK CONFIGURATION </b></button>' 
+	+'</div>'
 	    +'<br>'
 	    +'<br>' 
 	    +'<br>' 
-   +'<div class="col-sm-12" id="buttonDiv">'
-	   +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="finish" data-toggle="modal" data-target="#selectCheck" hidden><b> FINISH </b></button>' 
-	    +'</div>'
+    +'<div class="col-sm-12" id="buttonDiv1">'
+	+'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="animation" data-toggle="modal" data-target="#selectCheck1" hidden><b>ANIMATION</b></button>' 
+	+'</div> <br><br>'
+	
+	
+	+'<div class="col-sm-12" id="buttonDiv2">'
+	+'<button type="button" style="padding: 10px; height:auto; "  class="btn btn-danger btnStyle" id="finish" data-toggle="modal" data-target="#selectCheck" hidden><b> FINISH </b></button>' 
+	+'</div>'
+	    
+	    
 
 	     + ' <!-- Modal -->'
 				+ '<div class="modal fade" id="selectCheck" role="dialog">'
@@ -89,40 +96,50 @@ function mainPage1(){
 //    var pipeSizeSelect,angleSelect,flowRateSelect,fluidSelect,distSelect;
     
      $("#submitconfig").click(function() {
+			$("#infoSpan").prop("hidden", true);
 	 	 locationSelect=$("#location").val();
 		 paricalSelect=$("#particalSize").val();
 		 sensorSelect=$("#sensorType").val();
+			if(paricalSelect==1 && sensorSelect==2 || paricalSelect==2 && sensorSelect==1){
+			$("#modelMsg123").html("<b class='boldTextRed'>Wrong Sensor Selected</b>");	
+			}else{
 			
-				
 //				dataJson.pipe = pipeSize ;
 //				dataJson.fluid = fluidType;
 //				dataJson.material = floatMaterial;
-//		   console.log("locationSelect  = "+ locationSelect);	  
-//		     console.log("paricalSelect = "+paricalSelect);
-//		    console.log("sensorSelect = "+sensorSelect);
-//		   
+		   //console.log("locationSelect  = "+ locationSelect);	  
+		   //  console.log("paricalSelect = "+paricalSelect);
+		   // console.log("sensorSelect = "+sensorSelect);
+		   
 		if(locationSelect==0){
 		$("#errorPanel").prop("hidden",false);
-		$("#modelMsg123").html("<b class='boldTextRed'>Select Location </b>");
+		$("#modelMsg123").html("<b class='boldTextRed'>Select Location</b>");
 	}else if(paricalSelect==0){
 		$("#errorPanel").prop("hidden",false);
-		$("#modelMsg123").html("<b class='boldTextRed'>Select Partical Size </b>");
+		$("#modelMsg123").html("<b class='boldTextRed'>Select Partical Size</b>");
 	}else if(sensorSelect==0){
 		$("#errorPanel").prop("hidden",false);
-		$("#modelMsg123").html("<b class='boldTextRed'>Select Sensor Type </b>");
+		$("#modelMsg123").html("<b class='boldTextRed'>Select Sensor Type</b>");
 	}else{
-		$("#errorPanel").prop("hidden",true);
-		$("#modelMsg123").html("<b class='boldTextGreen'>Configured Successfully</b>");		
-		$("#location").prop('disabled',true);
-		$("#particalSize").prop('disabled',true);
-		$("#sensorType").prop('disabled',true);	
-		$("#submitconfig").prop('disabled',true);	
 		
-		  animation();
+		$("#errorPanel").prop("hidden",true);
+		$("#modelMsg123").html("<b class='boldTextGreen'>Configured Successfully. Click on stop button.</b>");		
+//		$("#location").prop('disabled',true);
+//		$("#particalSize").prop('disabled',true);
+//		$("#sensorType").prop('disabled',true);	
+//		$("#submitconfig").prop('disabled',true);	
+		
+		mimic(locationSelect,paricalSelect,sensorSelect); 
+		
+		
+		} 
 	}	
 	});
 	
 	
+	 $("#animation").click(function() {
+	 animation();
+	});
 	
 	$("#finish").click(function() {
 		$("#finish").prop('hidden',true);	
