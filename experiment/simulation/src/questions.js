@@ -1,4 +1,9 @@
-
+		var counterArrayJson=[];
+		var counterMasterJson ={};
+		var totalQues=5;
+		var correctAnswer=0;			
+		var bKnowledgeTime="";
+		var answerTotCount;
 			var flag = false;
 			var myRadio = null;
 			data = {};
@@ -113,9 +118,10 @@
 						}
 						dataQues.corrAns = ansCount;
 						 data.corrAns = dataQues;
+						 answerTotCount = ansCount;
 //						 console.log(data);
 						 
-						 $("#modelMsg").html("<b class='boldTextGreen'>Test Submitted Successfully .<br> Number of Correct Answers  : " + ansCount+"</b>");
+						 $("#modelMsg").html("<b class='boldTextGreen'>Test submitted successfully .<br> Number of correct answers  : " + ansCount+"</b>");
                          $('#nextLevelConfig').prop('hidden',false);
 						 
 						    $('#testSubmit').prop('hidden',true); 
@@ -125,13 +131,12 @@
 					
 					$('#nextLevelConfig').on('click', function() {	
 						 
-	      if(ansCount != 0){
-		
+//	      if(ansCount != 0){
 				$("#main-div-conf").html("");
-	             $("#canvas-div").html("");
-				mainPage1();
-//				  mimic();
-	} 
+	            $("#canvas-div").html("");
+				mainPage();
+//				mimic();
+//	} 
 	});	
 					
 });
