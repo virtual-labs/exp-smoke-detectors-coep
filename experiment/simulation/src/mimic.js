@@ -2,7 +2,7 @@ var countlocation=0;
 function mimic(locationSelect,paricalSelect,sensorSelect){
 //	$("#main-div-conf").html('');	
     $("#canvas-div").html('');	
-    $("#centerText1").html('MIMIC');
+    $("#centerText1").html('APPLICATION');
     $("#centerText2").html('CONFIGURATION');
 	$('#canvas-div').removeAttr('width');
 	$('#canvas-div').removeAttr('height');
@@ -47,7 +47,7 @@ function playAudio(){
     	}
 	
 	function location(){
-		$("#location").children(":selected").css("background-color","#f7dddd").prop('disabled',true);
+		
 		if(background==1)	{
 			countlocation++;
 			locationtype=paper.image("images/background.gif",x-38,y-8,776,696);
@@ -77,9 +77,11 @@ function playAudio(){
 		}else{
 			alert("Please Select Location");
 		}
+		$("#location").children(":selected").css("background-color","#f7dddd").prop('disabled',true);
 	}
 
 stop.click(function(){
+	$("#submitconfig").prop("hidden", false);
 	//console.log(countlocation);
 	$("#infoSpan").prop("hidden", false);
 	audio.pause();
@@ -87,8 +89,9 @@ stop.click(function(){
 	$("#location").prop("selectedIndex", 0);
 	$("#particalSize").prop("selectedIndex", 0);
 	$("#sensorType").prop("selectedIndex", 0);
-	if(countlocation==5){
-		$("#animation").prop("hidden",false);
+	if(countlocation>=5){
+//		$("#animation").prop("hidden",false);
+		$("#infoSpan").html('Click on "RESULT" button');
 //		$("#finish").prop("hidden",false);
 	}else{
 		

@@ -1,1 +1,1 @@
-## Smoke detectors and its application
+## Smoke detectors and its applications
