@@ -53,8 +53,9 @@ function mainPage() {
 	//	console.log("placementVAl=" + placementVAl);
 		PlacementName = $("#dlocation").children(":selected").text();
 		//console.log("placement Name =" + PlacementName);
-		$('#dlocation').prop('disabled', true);
+		
 		$("#dlocation").children(":selected").css("background-color", "#f7dddd");
+		$('#dlocation').prop('disabled', true);
 
 		if (placementVAl == 1) {
 			placementCnt++;
@@ -122,7 +123,10 @@ function mainPage() {
 
 			$("#submitconfigWall").click(function() {
 
-				placementSelect = $("#dlocation").val();
+				//placementSelect = $("#dlocation").val();
+				placementSelect=$("#dlocation").children(":selected").attr("value"); //first line
+				$("#dlocation option[value="+placementSelect+"]").css("background-color","#dacecf");
+				$("#dlocation option[value="+placementSelect+"]").attr("disabled",true);
 			//	console.log("placementSelect = " + placementSelect);
 				lengthWallSelect = wallLength.innerHTML;
 			//	console.log("lengthWallSelect = " + lengthWallSelect);
@@ -284,9 +288,12 @@ function mainPage() {
 			}
 
 			$("#submitconfigT2").click(function() {
+				placementSelect=$("#dlocation").children(":selected").attr("value"); //first line
+				$("#dlocation option[value="+placementSelect+"]").css("background-color","#dacecf");
+				$("#dlocation option[value="+placementSelect+"]").attr("disabled",true);
 				$("#DetectorVal").prop('hidden', false);
 				//console.log("submit config Ceiling");
-				placementSelect = $("#dlocation").val();
+				//placementSelect = $("#dlocation").val();
 			//	console.log("placementSelect = " + placementSelect);
 				widthCeilingSelect = CeilingWidth.innerHTML;
 			//	console.log("widthCeilingSelect = " + widthCeilingSelect);
@@ -454,6 +461,13 @@ function mainPage() {
 				$("#DetectorVal").prop('hidden', false);
 				//console.log("submit config wall");
 				placementSelect = $("#dlocation").val();
+				placementSelect=$("#dlocation").children(":selected").attr("value"); //first line
+				$("#dlocation option[value="+placementSelect+"]").css("background-color","#dacecf");
+				$("#dlocation option[value="+placementSelect+"]").attr("disabled",true);
+				console.log("placementSelect "+placementSelect);
+				
+				
+				
 				lengthSlopeSelect = SlopeLength.innerHTML;
 				AreaSlope = lengthSlopeSelect * widthSlopeSelect;
 				 noOfDetectorSlop22 = lengthSlopeSelect / 9;
