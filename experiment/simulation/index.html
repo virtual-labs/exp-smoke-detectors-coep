@@ -38,6 +38,15 @@
     margin-bottom: 10px;
 }
 
+.modal-header1{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+     background-color: #001f3f; 
+    color: #fff; 
+   
+    }
+
  .blinkInfoSpan {
                 animation: blinker 1.0s linear infinite;
                 color: red;
@@ -148,11 +157,40 @@
       </div> 
       <div class="col-sm-6">
       <button type="button" class="btn btn-danger btn1" id="downloadResult" hidden><b>Download Result</b></button> 
- 	  <button type="button" id="simDemo" class="btn btn-danger btn1" ><b>Simulation Demo</b> </button>
+ 	  <button type="button" id="simDemo" class="btn btn-danger btn1"  data-toggle="modal" data-target="#readProcedureModal1"><b>Simulation Demo</b> </button>
  	   <button type="button" class="btn btn-danger button1 btn1" id="procedure" data-toggle="modal" data-target="#readProcedureModal"><b>Procedure</b></button> 
  	  </div>
 </div> 
 </div> 
+
+<div id="readProcedureModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header1">
+        <h3 class="modal-title12">DEMO</h3>
+<!--         <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+      </div>
+      <div class="modal-body12">
+ 
+<!--     <video width="90%" id="simVideo" controls> -->
+<!--   <source src="images/simulation.mp4" type="video/mp4"> -->
+  
+<!-- </video> -->
+<center><video id="simVideo" width="90%" controls>
+    <source src="images/smoke.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video></center>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
 <div id="readProcedureModal" class="modal fade" role="dialog">
@@ -170,7 +208,7 @@
  <ol>
 	<li>Read and understand all instructions and questions provided</li>
 	<li>Answer all questions and click on the "Submit Test" button</li>
-	<li>Upon successful completion, click on the "Next Level" button which will appear in place of the "Submit" button</li>
+	<li>Upon successful completion, click on the "Next Level" button which will appear in place of the "Submit Test" button</li>
 </ol>
 
 <center id="modelTitle">Placement of detector</center>
@@ -179,7 +217,7 @@
 	<li>Select parameter for detection and click on check configuration button</li>
 	<li>Calculate number of detectors and submit the answer</li>
 	<li>Repeat the same process for other two different types of placement detector</li>
-	<li>Click on "GO TO APPLICATION" level button</li>
+	<li>Click on "GO TO APPLICATION level" button</li>
 </ol>
 
 <center id="modelTitle">Application</center>
@@ -188,10 +226,8 @@
 	<li>Select Location, particle size and Sensor type</li>
 	<li>Click on "CHECK CONFIGURATION" button</li>
 	<li>Click on "STOP" button</li>
-	<li>Select another Location, particle size and Sensor type</li>
-	<li>After select all location click on "ANIMATION" button</li>
-	<li>In Animation click on "START" button and click on "STOP" button</li>	
-	<li>Click on "Result" button for result analysis</li>
+	<li>Repeat above steps for other applications</li>	
+	<li>After all applications click on "Result" button for result analysis</li>
 	</ol>	
 </div> 
 
@@ -285,7 +321,53 @@ Copyrights &copy; COEPTECH - Virtual Lab
 <script type="text/javascript" src="src/mimic.js"></script>  
 <script type="text/javascript" src="src/table.js"></script>  
 <script type="text/javascript" src="src/analysis.js"></script>
+<script>
+$('#readProcedureModal1').click(function(){
+	 $('video').each(function(){
+		    $(this).get(0).pause();
+		  })
+	})
 
+$("#simDemo").on("click", function(){
+	
+	var video = document.getElementById("simVideo");
+
+	// Define the start and end skip times (in seconds)
+	var skipStart = 0;  // Skip the first 5 seconds
+	var skipEnd = 0;    // Skip the last 5 seconds
+
+//	video.onloadedmetadata = function() { 
+	    // Get the duration of the video
+	    var videoDuration = video.duration;
+
+	    // Ensure the video plays between skipStart and (duration - skipEnd)
+	    video.currentTime = skipStart;
+
+	    // Event listener to pause the video when it reaches the end limit (video duration - skipEnd)
+	    video.ontimeupdate = function() {
+	        if (video.currentTime >= videoDuration - skipEnd) {
+	            video.pause();
+				video.currentTime = skipStart;
+	        }
+	    };
+
+	    // Prevent seeking outside the allowed time range
+	    video.addEventListener('seeking', function(event) {
+	        // If seeking before the start time or after the allowed end time, reset the current time
+	        if (video.currentTime < skipStart) {
+	            video.currentTime = skipStart;
+	        } else if (video.currentTime > videoDuration - skipEnd) {
+	            //video.currentTime = videoDuration - skipEnd;
+				video.currentTime = skipStart;
+	        }
+	    });
+//	};
+	
+	video.play();
+})
+
+
+</script>
 
 
 </html>
