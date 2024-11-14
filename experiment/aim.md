@@ -1,7 +1,7 @@
 ### Aim 
 Understand operation of smoke detectors
 
-### Objective
+### Objectives
 - Understand operation of smoke detectors
 - Configure different requirements
 - Select smoke detectors as per requirements
