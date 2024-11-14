@@ -17,4 +17,4 @@
 - Click on "CHECK CONFIGURATION" button
 - Click on "STOP" button
 - Repeat above steps for other applications	
-- After all applications click on "Result" button for result analysis
+- After all applications, click on "Result" button for result analysis
