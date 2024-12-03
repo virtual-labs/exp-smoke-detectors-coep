@@ -38,9 +38,9 @@ function mainPage() {
 	$(".labelstyle").prop('hidden',false);
 	$("#dlocation").prop('hidden',false);
 	$('#dlocation').prop('disabled', false);
-	$("#centerText1").html('PLACEMENT OF DETEDTOR');
+	$("#centerText1").html('PLACEMENT OF DETECTOR');
 	$("#centerText2").html('CONFIGURATION');
-	var htm = '<img src="images/typePlacement.png" class="img-fluid" >'
+	var htm = '<img src="images/typePlacement.png" class="img-fluid" style="width:95%">'
 	$("#canvas-div").html(htm);
 	//      animation();
 //	var selection = '

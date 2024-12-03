@@ -12,7 +12,7 @@ function mainPage1() {
 	$("#main-div-conf").html('');
 	$("#canvas-div").html('');
 	$("#tableDesign").html('');
-	$("#centerText1").html('WORKING OF SMOKE DETEDTOR');
+	$("#centerText1").html('WORKING OF SMOKE DETECTOR');
 	$("#centerText2").html('CONFIGURATION');
 	var htm = '<img src="images/smkDetector.jpeg" class="img-fluid" >'
 	$("#canvas-div").html(htm);
