@@ -87,19 +87,19 @@ QuestionsJSON = {
 				"QUES": [{
 					
 					
-					"QC": "There are two types of detection technologies of smoke alarms.",
+					"QC": "There are two types of detection technologies of smoke alarms. these are ...",
 					"ANS": [{
 						"ANSID": false,
-						"content": "Ionization detectors"
+						"content": "a) Ionization detectors"
 					}, {
 						"ANSID": false,
-						"content": "Photoelectric"
+						"content": "b) Photoelectric"
 					}, {
 						"ANSID": true,
-						"content": "Both a and b"
+						"content": "c) Both a and b"
 					}, {
 						"ANSID": false,
-						"content": "None of these"
+						"content": "d) None of these"
 					}]
 					
 				}]
